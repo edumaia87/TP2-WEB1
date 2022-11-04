@@ -6,15 +6,25 @@ class User {
     private $password;
     private $cpf;
     private $telefone;
+    private $street;
+    private $district;
+    private $number;
+    private $city;
+    private $state;
     private $userType;
 
-    public function __construct($id, $name, $email, $password, $cpf, $telefone, $userType) {
+    public function __construct($id, $name, $email, $password, $cpf, $telefone, $street, $district, $number, $city, $state, $userType) {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
         $this->cpf = $cpf;
         $this->telefone = $telefone;
+        $this->street = $street;
+        $this->district = $district;
+        $this->number = $number;
+        $this->city = $city;
+        $this->state = $state;
         $this->userType = $userType;
     }
 
@@ -24,7 +34,6 @@ class User {
 
     public function setId($id) {
         $this->id = $id;
-        return $this;
     }
 
     public function getName() {
@@ -33,12 +42,10 @@ class User {
 
     public function setName($name) {
         $this->name = $name;
-        return $this;
     }
 
     public function getEmail() {
         return $this->email;
-        return $this;
     }
 
     public function setEmail($email) {
@@ -51,7 +58,6 @@ class User {
     }
     public function setPassword($password) {
         $this->password = $password;
-        return $this;
     }
 
     public function getCpf() {
@@ -69,18 +75,53 @@ class User {
 
     public function setTelefone($telefone) {
         $this->telefone = $telefone;
-        return $this;
     }
 
-    public function getUserType()
-    {
+    public function getStreet() {
+        return $this->street;
+    }
+
+    public function setStreet($street) {
+        $this->street = $street;
+    }
+
+    public function getDistrict() {
+        return $this->district;
+    }
+
+    public function setDistrict($district) {
+        $this->district = $district;
+    }
+
+    public function getNumber() {
+        return $this->number;
+    }
+
+    public function setNumber($number) {
+        $this->number = $number;
+    }
+
+    public function getCity() {
+        return $this->city;
+    }   
+
+    public function setCity($city) {
+        $this->city = $city;
+    }
+
+    public function getState() {
+        return $this->state;
+    }
+
+    public function setState($state) {
+        $this->state = $state;
+    } 
+
+    public function getUserType() {
         return $this->userType;
     }
 
-    public function setUserType($userType)
-    {
+    public function setUserType($userType) {
         $this->userType = $userType;
-
-        return $this;
     }
 }

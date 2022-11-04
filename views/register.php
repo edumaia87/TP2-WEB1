@@ -12,7 +12,7 @@
     <div id="login-card">
         <h2 id="logo"><i class="fas fa-book"></i> Cantinho da Leitura</h2>
         <h3>Cadastro</h3>
-        <form id="login-form" method="POST" action="process.php">
+        <form id="login-form" method="POST" action="processRegister.php">
             <label for="name">Nome completo</label>
             <input name="name" type="text" placeholder="Digite seu nome completo">
             <label for="email">E-mail</label>

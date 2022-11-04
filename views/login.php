@@ -11,7 +11,7 @@
 <body>
     <div id="login-card">
         <h2 id="logo"><i class="fas fa-book"></i> Cantinho da Leitura</h2>
-        <form id="login-form" method="POST" action="home.php">
+        <form id="login-form" method="POST" action="processLogin.php">
         <label for="email">E-mail</label>
             <input name="email" type="text" placeholder=" digite seu e-mail">
             <label for="password">Senha</label>
