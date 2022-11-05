@@ -149,10 +149,55 @@ html::-webkit-scrollbar-thumb {
 .bottom-navbar a:hover {
     background: var(--dark-color);
 }
-.banner #banner-image {
-    width: 100%;
-    height: 400px;
+
+/* Main */
+main h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    color: var(--red);
 }
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(rgba(133, 45, 45, 0.5), rgba(0,0,0,0.5)), url('../img/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    height: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.banner button {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.banner button:hover {
+    transition: .2s ease-in-out;
+    background-color: var(--dark-color);
+    cursor: pointer;
+}
+
+.banner p {
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin-bottom: 10px;
+}
+
 .products {
     display: flex;
     flex-direction: row;
@@ -171,6 +216,7 @@ html::-webkit-scrollbar-thumb {
     padding-bottom: 20px;
     font-size: 2rem;
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -190,10 +236,150 @@ html::-webkit-scrollbar-thumb {
 }
 
 .box-container button:hover {
+    transition: .2s ease-in-out;
     background: var(--dark-color);
+    cursor: pointer;
 }
 
 .box-container #price {
     font-weight: bold;
     margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: var(--dark-color);
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+.footer-bottom p a {
+   color: var(--red);
+   font-size: 16px;
+   text-decoration: none;
+}
+
+.footer-bottom p a:hover {
+    transition: .2s ease-in-out;
+    color: var(--dark-color);
+}
+
+@media (max-width:500px) {
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+}
+
+/* Sobre */
+.about-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(rgba(133, 45, 45, 0.26), rgba(0, 0, 0, 0.5)), url('../img/about-us.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    height: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.who-are-we {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.who-are-we h2 {
+    font-size: 20px;
+}
+
+.who-are-we p {
+    font-size: 15px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.who-are-we .who-img {
+    width: 25%;
+    background-image: url('../img/books.jpeg');
 }

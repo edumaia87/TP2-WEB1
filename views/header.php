@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header-1">
-        <a href="#home.php" class="logo"> <i class="fas fa-book"></i> Cantinho da Leitura</a>
+        <a href="home.php" class="logo"> <i class="fas fa-book"></i> Cantinho da Leitura</a>
 
         <form action="" class="search-form">
             <input type="search" name="" placeholder="O que você procura?" id="search-box">
@@ -8,6 +8,7 @@
         </form>
 
         <div class="icons">
+
             <div id="search-btn" class="fas fa-search"></div>
             <div id="login-btn">
                 <!-- <ul id="user-options">
@@ -28,6 +29,8 @@
                     </li>
                 </ul> -->
             </div>
+            <a href="#" class="fas fa-user"></a>
+            <a href="#" class="fas fa-heart"></a>
             <a href="cart.php" class="fas fa-shopping-cart"></a>
 
         </div>
@@ -35,10 +38,10 @@
 
     <div class="header-2">
         <nav class="navbar">
-            <a href="#about.php">Sobre</a>
-            <a href="#store.php">Loja</a>
-            <a href="#contact.php">Contato</a>
-            <a href="#orders.php">Pedidos</a>
+            <a href="about.php">Sobre</a>
+            <a href="store.php">Loja</a>
+            <a href="contact.php">Contato</a>
+            <a href="orders.php">Pedidos</a>
         </nav>
     </div>
 </header>
