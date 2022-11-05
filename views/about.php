@@ -13,9 +13,12 @@
     </div>
 
     <div class="who-are-we">
-        <h2>Quem somos nós?</h2>
-        <p>Somos uma empresa, competente e compromissada a entregar produtos da melhor qualidade e o melhor atendimento possíveis.</p>
-        <div class="who-img"></div>
+        <div class="text">
+            <span></span>
+            <h2>Quem somos nós?</h2>
+            <p>Somos uma empresa, competente e compromissada a entregar <br> produtos da melhor qualidade e o melhor atendimento possíveis.</p>
+        </div>
+        <img src="../img/books.jpeg" alt="">
     </div>
 
     <?php include 'footer.php' ?>

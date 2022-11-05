@@ -365,21 +365,87 @@ main h2 {
 
 .who-are-we {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.who-are-we h2 {
-    font-size: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px;
 }
 
-.who-are-we p {
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.text span {
+    background-color: var(--red);
+    width: 75px;
+    height: 3px;
+}
+
+.text h2 {
+    font-size: 40px;
+}
+
+.text p {
     font-size: 15px;
     text-align: justify;
     font-weight: 400;
 }
 
-.who-are-we .who-img {
-    width: 25%;
-    background-image: url('../img/books.jpeg');
+
+.who-are-we img {
+    width: 450px;
+    height: 400px;
+}
+
+.who-are-we:nth-child(2) {
+    align-self: flex-end;
+}
+
+/* Contato  */
+.contact-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(rgba(133, 45, 45, 0.26), rgba(0, 0, 0, 0.5)), url('../img/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    height: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    margin: 50px;
+    line-height: 50px;
+}
+
+.contacts ul {
+    font-size: 17px;
+    list-style: none;
+}
+
+.dashed {
+    width: 34%;
+    border: 8px solid var(--red);
+    border-style: dashed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
 }
