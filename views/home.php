@@ -19,39 +19,38 @@ if(!isset($_SESSION)) {
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <div class="banner">
+        <img id="banner-image" src="../img/banner.jpg" alt="">
+    </div>
     <section class="products">
         <div class="box-container">
-            <form action="" method="post" class="box">
-                <img class="image" src="../img/led-zeppeling-icon.jpg" alt="">
-                <div class="name">Led Zeppelin</div>
-                <div class="price">499.99</div>
-                <input type="number" min="1" name="product_quantity" value="1" class="qty">
-                <input type="hidden" name="product_name" value="">
-                <input type="hidden" name="product_price" value="">
-                <input type="hidden" name="product_image" value="">
-                <input type="submit" value="Adicionar ao carrinho" name="add_to_cart" class="btn">
-             </form>
-            <form action="" method="post" class="box">
-                <img class="image" src="../img/led-zeppeling-icon.jpg" alt="">
-                <div class="name">Led Zeppelin</div>
-                <div class="price">499.99</div>
-                <input type="number" min="1" name="product_quantity" value="1" class="qty">
-                <input type="hidden" name="product_name" value="">
-                <input type="hidden" name="product_price" value="">
-                <input type="hidden" name="product_image" value="">
-                <input type="submit" value="Adicionar ao carrinho" name="add_to_cart" class="btn">
-             </form>
-            <form action="" method="post" class="box">
-                <img class="image" src="../img/led-zeppeling-icon.jpg" alt="">
-                <div class="name">Led Zeppelin</div>
-                <div class="price">499.99</div>
-                <input type="number" min="1" name="product_quantity" value="1" class="qty">
-                <input type="hidden" name="product_name" value="">
-                <input type="hidden" name="product_price" value="">
-                <input type="hidden" name="product_image" value="">
-                <input type="submit" value="Adicionar ao carrinho" name="add_to_cart" class="btn">
-             </form>
+            <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
+            <p>Led Zeppelin</p>
+            <p id="price">R$ 199.90</p>
+            <button>Comprar</button>
+        </div>
+        <div class="box-container">
+            <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
+            <p>Led Zeppelin</p>
+            <p id="price">R$ 199.90</p>
+            <button>Comprar</button>
+        </div>
+        <div class="box-container">
+            <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
+            <p>Led Zeppelin</p>
+            <p id="price">R$ 199.90</p>
+            <button>Comprar</button>
+        </div>
+        <div class="box-container">
+            <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
+            <p>Led Zeppelin</p>
+            <p id="price">R$ 199.90</p>
+            <button>Comprar</button>
         </div>
     </section>
+
+    <footer>
+        <div class="footer"></div>
+    </footer>
 </body>
 </html>

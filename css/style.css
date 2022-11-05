@@ -1,48 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root {
-    --red:#df1212;
+    --red: #df1212;
     --light-red: rgb(231, 55, 55);
-    --dark-color:#8a0606;
-    --black:#444;
-    --light-color:#666;
-    --border:.1rem solid rgba(0,0,0,.1);
-    --border-hover:.1rem solid var(--black);
-    --box-shadow:0 .5rem 1rem rgba(0, 0, 0, 0.253);
+    --dark-color: #8a0606;
+    --black :#444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid var(--black);
     --white:#fff;
-   --light-color:#666;
-   --light-white:#ccc;
-   --light-bg:#f5f5f5;
 }
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
     scroll-padding-top: 5rem;
-    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
-    width:1rem;
+    width: 1.2rem;
 }
 
 html::-webkit-scrollbar-track {
-    background:transparent;
+    background: transparent;
 }
 
 html::-webkit-scrollbar-thumb {
-    background:var(--black);
+    background: var(--red);
 }
 
 * {
     font-family: 'Poppins', sans-serif;
-    margin:0; 
-    padding:0;
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box;
-    outline: none; border: none;
+    outline: none;
+    border: none;
     text-decoration: none;
-    transition:all .2s linear;
-    transition:width none;
 }
 
 /* Header */
@@ -56,20 +49,20 @@ html::-webkit-scrollbar-thumb {
 .header .header-1 .logo {
     font-size: 2.5rem;
     font-weight: bolder;
-    color:var(--black);
+    color: var(--black);
 }
 
 .header .header-1 .logo i {
-    color:var(--red);
+    color: var(--red);
 }
 
 .header .header-1 .search-form {
-    width:50rem;
-    height:4rem;
-    border:var(--border);
+    width: 50rem;
+    height: 4rem;
+    border: var(--border);
     overflow: hidden;
-    background:#fff;
-    display:flex;
+    background: #fff;
+    display: flex;
     align-items: center;
     border-radius: .5rem;
 }
@@ -77,34 +70,34 @@ html::-webkit-scrollbar-thumb {
 .header .header-1 .search-form input {
     font-size: 1.6rem;
     padding:0 1.2rem;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     text-transform: none;
-    color:var(--black);
+    color: var(--black);
 }
 
 .header .header-1 .search-form label {
     font-size: 2px;
     padding-right: 1.5rem;
-    color:var(--black);
+    color: var(--black);
     cursor: pointer;
 }
 
 .header .header-1 .search-form label:hover {
-    color:var(--red);
+    color: var(--red);
 }
 
 .header .header-1 .icons div,
 .header .header-1 .icons a {
     font-size: 2.5rem;
     margin-left: 1.5rem;
-    color:var(--black);
+    color: var(--black);
     cursor: pointer;
 }
 
 .header .header-1 .icons div:hover,
 .header .header-1 .icons a:hover {
-    color:var(--red);
+    color: var(--red);
 }
 
 #search-btn {
@@ -112,7 +105,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .header .header-2 {
-    background:var(--red);
+    background: var(--red);
 }
 
 .header .header-2 .navbar {
@@ -122,113 +115,85 @@ html::-webkit-scrollbar-thumb {
 .header .header-2 .navbar a {
     color:#fff;
     display: inline-block;
-    padding:1.2rem;
+    padding: 1.2rem;
     font-size: 1.7rem;
 }
 
 .header .header-2 .navbar a:hover {
-    background:var(--dark-color);
+    background: var(--dark-color);
 }
 
 .header .header-2.active {
-    position:fixed;
-    top:0; left:0; right:0;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
     z-index: 1000;
 }
 
 .bottom-navbar {
     text-align: center;
-    background:var(--red);
+    background: var(--red);
     position: fixed;
-    bottom:0; left:0; right:0;
-    z-index: 1000;
+    bottom:0; left:0; right: 0;
+    z-index: 100;
     display: none;
 }
 
 .bottom-navbar a {
     font-size: 2.5rem;
-    padding:2rem;
-    color:#fff;
+    padding: 2rem;
+    color: #fff;
 }
 
 .bottom-navbar a:hover {
-    background:var(--dark-color);
+    background: var(--dark-color);
 }
-
-/* Tela de Login */
-/* #login-container {
+.banner #banner-image {
+    width: 100%;
+    height: 400px;
+}
+.products {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    color: #000;
-    font-weight: bold;
-} */
+    flex-wrap: wrap;
+}
 
 .products .box-container {
-    max-width: 1200px;
-    margin:0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
-    grid-template-rows: repeat(auto-fit, 30rem);
-    align-items: flex-start;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.products .box-container .box{
-    border-radius: .5rem;
-    background-color: var(--white);
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
-    text-align: center;
-    border: var(--border);
-    position: relative;
-}
-
-.products .box-container .box .image{
+.box-container img {
+    width: 20rem;
     height: 30rem;
 }
 
-.products .box-container .box .name{
-    padding:1rem 0;
-    font-size: 2rem;
-    color:var(--black);
-}
-
-.products .box-container .box .qty{
+.box-container button {
+    background: var(--red);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
     width: 100%;
-    padding:1.2rem 1.4rem;
-    border-radius: .5rem;
-    border:var(--border);
-    margin:1rem 0;
-    font-size: 2rem;
+    border-radius: 5px;
 }
 
-.products .box-container .box .price{
-    position: absolute;
-    top:1rem; left:1rem;
-    border-radius: .5rem;
-    padding:1rem;
-    font-size: 2.5rem;
-    color:var(--white);
-    background-color: var(--red);
+.box-container button:hover {
+    background: var(--dark-color);
 }
 
-.btn {
-   display: inline-block;
-   margin-top: 1rem;
-   padding:1rem 3rem;
-   cursor: pointer;
-   color:var(--white);
-   font-size: 1.8rem;
-   border-radius: .5rem;
-   background-color: var(--red);
-}
-
-.btn:hover {
-    background-color: var(--light-red);
-}
-
-#login-container input, button {
-    border: 1px solid black;
+.box-container #price {
+    font-weight: bold;
+    margin-top: 30px;
 }
