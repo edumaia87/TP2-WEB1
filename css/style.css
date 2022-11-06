@@ -439,13 +439,41 @@ main h2 {
     list-style: none;
 }
 
-.dashed {
-    width: 34%;
-    border: 8px solid var(--red);
-    border-style: dashed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    position: absolute;
+/* Carrinho  */
+.my-cart {
+    margin: 35px;
 }
+
+.cart-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 900px;
+    height: 150px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    /* height: 150px; */
+}
+
+.cart-products table td, table th {
+    border-bottom: 1px solid #000;
+    border-radius: 15%;
+    /* padding: 5px; */
+    text-align: center;
+}
+
+.cart-products img {
+    width: 100px;
+    height: 100px;
+}
+
