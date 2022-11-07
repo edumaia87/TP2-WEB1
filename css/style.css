@@ -477,3 +477,33 @@ table {
     height: 100px;
 }
 
+.cart-container {
+    width: 70vw;
+    height: 85vh;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 5px 30px var(--dark-color);
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+#action {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--red);
+    cursor: pointer;
+}
+
+#action:hover {
+    color: var(--dark-color);
+}
+
+.cart-header {
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
