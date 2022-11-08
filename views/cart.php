@@ -6,63 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
 
-    <link rel="stylesheet" href="../">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <?php include 'header.php'; ?>
     
-    <!-- <h1 class="my-cart"><i class="fa fa-shopping-cart"></i> Meu carrinho</h1> -->
-    <!-- <section class="cart-content">
-        <div class="cart-products">
+    <h1 class="my-cart"><i class="fa fa-shopping-cart"></i> Meu carrinho</h1>
+
+    <section id="cart-container">
+        <div id="products">
             <table>
                 <thead>
                     <tr>
-                        <th></th>
+                        <th>Remover</th>
+                        <th>Imagem</th>
                         <th>Produto</th>
-                        <th>Qtd</th>
                         <th>Preço</th>
-                        <th>Excluir</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th><a href="#envia-pro-produto"><img src="../img/led-zeppeling-icon.jpg" alt=""></a></th>
-                        <td>Livro Led Zeppelin</td>
-                        <td>1</td>
-                        <td>1 x R$ 199.90</td>
-                        <td><a href="#"><i class="fa fa-trash"></i></a></td>
+                        <td><i class="fa fa-trash"></i></td>
+                        <td><img src="../img/led-zeppeling.jpg"></td>
+                        <td>Led Zeppelin</td>
+                        <td>RS$199.99</td>
+                        <td><input type="number" name="qtd" value="1" id="qtd-products"></td>
+                        <td>RS$199.99</td>
                     </tr>
                 </tbody>
             </table>
-            <button id="clear-cart" type="submit">Limpar carrinho</button>
         </div>
 
-        <div class="shipping-discount">
-            <div class="discount-coupon">
-                <h3>Cupom de desconto:</h3>
-                <div>
-                    <input type="text" placeholder="Cupom">
-                    <button><i class="fa fa-ticket"></i> Aplicar</button>
-                </div>
+        <div id="coupon-total">
+            <div id="coupon-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Cupom de desconto</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Digite seu cupom">
+                                <button>Calcular</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="shipping">
-            <h3>Frete e prazos:</h3>
-                <div>
-                    <input type="text" placeholder="CEP*">
-                    <button><i class="fa fa-truck-fast"></i> Calcular</button>
-                </div>
+
+            <div id="total-table">
+                <table>
+                    <thead>
+                        <tr><th colspan="2">Preço total</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>199.99</td>
+                        </tr>
+                        <tr>
+                            <td>Frete</td>
+                            <td>29.99</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </section> -->
-
-    <div class="cart-container">
-        <div class="cart-header">
-            <h1 class="my-cart"><i class="fa fa-shopping-cart"></i> Meu carrinho</h1>
-            <h5 id="action">Remover todos os produtos</h5>
-        </div>
-    </div>
-
-    <!-- https://uxplanet.org/how-to-create-a-shopping-cart-ui-using-html-css-e5db3cd55aa0 -->
+    </section>
+    
     <?php include 'footer.php'; ?>
 </body>
 </html>
