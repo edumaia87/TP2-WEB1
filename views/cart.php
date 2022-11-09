@@ -32,7 +32,7 @@
                         <td><img src="../img/led-zeppeling.jpg"></td>
                         <td>Led Zeppelin</td>
                         <td>RS$199.99</td>
-                        <td><input type="number" name="qtd" value="1" id="qtd-products"></td>
+                        <td><input type="number" name="qtd" min="1" value="1" id="qtd-products"></td>
                         <td>RS$199.99</td>
                     </tr>
                 </tbody>

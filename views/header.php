@@ -8,31 +8,25 @@
         </form>
 
         <div class="icons">
-
-            <div id="search-btn" class="fas fa-search"></div>
-            <div id="login-btn">
-                <!-- <ul id="user-options">
-                    <li>
-                        <?php 
-                            if(isset($_SESSION)) {
-                                echo"<p>Bem vindo, </p>"; 
-                                echo  $_SESSION['email.'];
-                            } else {
-                                session_abort();
-                            }
-                        ?>
-                        <p><a href="logout.php">Sair</a></p>
-                        <ul>
-                            <li>Editar perfil</li>
-                            <li>logout</li>
-                        </ul>
-                    </li>
-                </ul> -->
-            </div>
-            <a href="#" class="fas fa-user"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="cart.php" class="fas fa-shopping-cart"></a>
-
+            <ul id="user-options">
+                <li>
+                    <?php 
+                        if(isset($_SESSION['email'])) {
+                            echo "<p>Bem vindo, " . $_SESSION['email'] . "</p>";
+                        } else {
+                            echo '<a href="login.php" class="fas fa-user"></a>';
+                        }  
+                    ?>
+                    <ul id="sub-menu">
+                        <li><a href="editUser.php">Editar perfil</a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                    </ul>
+                </li>
+                <!-- <a href="#" class="fas fa-heart"></a> -->
+                <li>
+                    <a href="cart.php" class="fas fa-shopping-cart"></a>
+                </li>
+            </ul>
         </div>
     </div>
 

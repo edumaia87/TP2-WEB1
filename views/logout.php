@@ -1,9 +1,8 @@
 <?php
 
-if(!isset($_SESSION)) {
-    session_start();
-}
+session_start();
 
-session_destroy();
+unset($_SESSION['email']);
 
-header('location: home.php');
+header('Location: home.php');
+exit();

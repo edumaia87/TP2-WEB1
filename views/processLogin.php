@@ -6,6 +6,7 @@ $daoUser = new DaoUser();
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
 $user = [];
+
 if(isset($_POST['email']) || isset($_POST['password'])) {
     if(strlen($_POST['email']) == 0) {
         echo "Preencha seu email corretamente!";

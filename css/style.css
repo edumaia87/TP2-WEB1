@@ -87,6 +87,16 @@ html::-webkit-scrollbar-thumb {
     color: var(--red);
 }
 
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icons p {
+    font-size: 15px;
+}
+
 .header .header-1 .icons div,
 .header .header-1 .icons a {
     font-size: 2.5rem;
@@ -129,6 +139,41 @@ html::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     z-index: 1000;
+}
+
+#user-options {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#user-options #sub-menu {
+    background-color: var(--white);
+    display: none;
+    position: absolute;
+}
+
+#user-options:hover #sub-menu {
+    transition: .2s ease-in-out;
+    display: block;
+}
+
+#user-options #sub-menu {
+    width: 150px;
+    list-style-type: none;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sub-menu ul {
+    position: absolute;
+    display: none;
+}
+
+#user-options #sub-menu li a {
+    display: block;
+    font-size: 15px;
 }
 
 .bottom-navbar {
