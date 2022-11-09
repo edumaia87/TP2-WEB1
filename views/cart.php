@@ -11,7 +11,7 @@
 <body>
     <?php include 'header.php'; ?>
     
-    <h1 class="my-cart"><i class="fa fa-shopping-cart"></i> Meu carrinho</h1>
+    <h1 id="my-cart"><i class="fa fa-shopping-cart"></i> Meu carrinho</h1>
 
     <section id="cart-container">
         <div id="products">
@@ -44,14 +44,14 @@
                 <table>
                     <thead>
                         <tr>
-                            <td>Cupom de desconto</td>
+                            <th>Cupom de desconto</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <input type="text" placeholder="Digite seu cupom">
-                                <button>Calcular</button>
+                                <input id="coupon-input" type="text" placeholder="Digite seu cupom">
+                                <button id="calculate-coupon">Calcular</button>
                             </td>
                         </tr>
                     </tbody>
@@ -61,7 +61,7 @@
             <div id="total-table">
                 <table>
                     <thead>
-                        <tr><th colspan="2">Preço total</th></tr>
+                        <tr><th colspan="2">Preço</th></tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -71,6 +71,10 @@
                         <tr>
                             <td>Frete</td>
                             <td>29.99</td>
+                        </tr>
+                        <tr>
+                            <td>Preço total</td>
+                            <td>229.99</td>
                         </tr>
                     </tbody>
                 </table>
