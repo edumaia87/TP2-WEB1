@@ -19,7 +19,6 @@ if(isset($_POST['email']) || isset($_POST['password'])) {
             echo "Deu ruim.";
         }
 
-
         if(!isset($_SESSION)) {
             session_start();
         }

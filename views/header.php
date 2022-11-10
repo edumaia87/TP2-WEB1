@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?> 
+
 <header class="header">
     <div class="header-1">
         <a href="home.php" class="logo"> <i class="fas fa-book"></i> Cantinho da Leitura</a>

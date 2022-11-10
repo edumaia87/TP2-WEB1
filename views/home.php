@@ -1,5 +1,10 @@
 <?php 
-    session_start();
+    // session_start();
+
+    require_once('../DAO/DAOBook.php');
+
+    $daoBook = new DaoBook();
+    $listBook = $daoBook->listBook();
 ?> 
 
 <!DOCTYPE html>
@@ -16,36 +21,21 @@
     <?php include 'header.php'; ?>
     <main>
         <div class="banner">
-            <!-- <img id="banner-image" src="../img/banner.jpg" alt=""> -->
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <button>Ver mais</button>
         </div>
         <h2>Produtos em destaque</h2>
         <section class="products">
-            <div class="box-container">
-                <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
-                <p>Led Zeppelin</p>
-                <p id="price">R$ 199.90</p>
-                <button>Comprar</button>
-            </div>
-            <div class="box-container">
-                <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
-                <p>Led Zeppelin</p>
-                <p id="price">R$ 199.90</p>
-                <button>Comprar</button>
-            </div>
-            <div class="box-container">
-                <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
-                <p>Led Zeppelin</p>
-                <p id="price">R$ 199.90</p>
-                <button>Comprar</button>
-            </div>
-            <div class="box-container">
-                <img src="../img/led-zeppeling.jpg" alt="Livro Led Zeppelin">
-                <p>Led Zeppelin</p>
-                <p id="price">R$ 199.90</p>
-                <button>Comprar</button>
-            </div>
+            <?php
+                foreach($listBook as $book) {
+                    echo '<div class="box-container">';
+                        echo '<img src="'. $book['image'] . '">';
+                        echo "<p>" . $book['title'] . "</p>";
+                        echo '<p id="price">R$' . $book['price'] . '</p>';
+                        echo '<button>Comprar</button>';
+                    echo '</div>';
+                }
+            ?>
         </section>
     </main>
 

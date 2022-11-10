@@ -2,6 +2,7 @@
 class Book {
     private $id;
     private $title;
+    private $image;
     private $author;
     private $description;
     private $price;
@@ -9,16 +10,16 @@ class Book {
     private $genre;
     private $isbn;
 
-    public function __construct($id, $title, $author, $description, $price, $publishedDate, $genre, $isbn) {
-        $this->id = $id;
-        $this->title = $title;
-        $this->author = $author;
-        $this->description = $description;
-        $this->price = $price;
-        $this->publishedDate = $publishedDate;
-        $this->genre = $genre;
-        $this->isbn = $isbn;
-    }
+    // public function __construct($id, $title, $author, $description, $price, $publishedDate, $genre, $isbn) {
+    //     $this->id = $id;
+    //     $this->title = $title;
+    //     $this->author = $author;
+    //     $this->description = $description;
+    //     $this->price = $price;
+    //     $this->publishedDate = $publishedDate;
+    //     $this->genre = $genre;
+    //     $this->isbn = $isbn;
+    // }
 
     public function getId() {
         return $this->id;
@@ -26,7 +27,6 @@ class Book {
     
     public function setId($id) {
         $this->id = $id;
-        return $this;
     }
 
     public function getTitle() {
@@ -35,7 +35,14 @@ class Book {
 
     public function setTitle($title) {
         $this->title = $title;
-        return $this;
+    }
+
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function setImage($image) {
+        $this->image = $image;
     }
 
     public function getAuthor() {
@@ -44,7 +51,6 @@ class Book {
 
     public function setAuthor($author) {
         $this->author = $author;
-        return $this;
     }
 
     public function getDescription() {
@@ -53,7 +59,6 @@ class Book {
 
     public function setDescription($description) {
         $this->description = $description;
-        return $this;
     }
 
     public function getPrice() {
@@ -62,7 +67,6 @@ class Book {
 
     public function setPrice($price) {
         $this->price = $price;
-        return $this;
     }
 
     public function getPublishedDate() {
@@ -71,7 +75,6 @@ class Book {
 
     public function setPublishedDate($publishedDate) {
         $this->publishedDate = $publishedDate;
-        return $this;
     }
 
     public function getGenre() {
@@ -88,6 +91,5 @@ class Book {
 
     public function setIsbn($isbn) {
         $this->isbn = $isbn;
-        return $this;
     }
 }
