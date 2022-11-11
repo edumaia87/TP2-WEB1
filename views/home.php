@@ -27,18 +27,22 @@
         <h2>Produtos em destaque</h2>
         <section class="products">
             <?php
-                foreach($listBook as $book) {
-                    echo '<div class="box-container">';
-                        echo '<img src="'. $book['image'] . '">';
-                        echo "<p>" . $book['title'] . "</p>";
-                        echo '<p id="price">R$' . $book['price'] . '</p>';
-                        echo '<button>Comprar</button>';
-                    echo '</div>';
-                }
+            foreach($listBook as $book) {
+            ?>
+                <div class="box-container">
+                    <form method="POST" action="addToCart.php">
+                        <img name="image" src="<?= $book['image'] ?>">
+                        <p><?= $book['title'] ?></p>
+                        <p id="price">R$ <?=$book['price']?></p>
+                        <button type="submit">Comprar</button>
+                    </form>
+                </div>
+            <?php
+            }
             ?>
         </section>
     </main>
-
+    
     <?php include 'footer.php' ?>
 </body>
 </html>

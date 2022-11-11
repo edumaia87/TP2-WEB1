@@ -8,7 +8,7 @@ class Cart {
     private $total;
     private $userId;
 
-    public function __construct($id, $name, $price, $quantity, $image, $total, $userId) {
+    /*public function __construct($id, $name, $price, $quantity, $image, $total, $userId) {
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
@@ -16,7 +16,7 @@ class Cart {
         $this->image = $image;
         $this->total = $total;
         $this->userId = $userId;
-    }
+    }*/
 
     public function getId() {
         return $this->id;
