@@ -30,11 +30,14 @@
             foreach($listBook as $book) {
             ?>
                 <div class="box-container">
-                    <form method="POST" action="addToCart.php">
+                    <form id="formAddCart" method="POST" action="">
+                        <input type="hidden" name="image" value="<?= $book['image']?>">
+                        <input type="hidden" name="title" value="<?= $book['title']?>">
+                        <input type="hidden" name="price" value="<?= $book['price']?>">
                         <img name="image" src="<?= $book['image'] ?>">
-                        <p><?= $book['title'] ?></p>
-                        <p id="price">R$ <?=$book['price']?></p>
-                        <button type="submit">Comprar</button>
+                        <p id="title" name="title"><?= $book['title'] ?></p>
+                        <p id="price" name="price">R$ <?=$book['price']?></p>
+                        <button id="buttonBuy" type="submit">Comprar</button>
                     </form>
                 </div>
             <?php
@@ -44,5 +47,7 @@
     </main>
     
     <?php include 'footer.php' ?>
+
+    <script src="../js/addToCart.js"></script>
 </body>
 </html>
