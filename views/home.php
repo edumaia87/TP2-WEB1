@@ -1,5 +1,5 @@
 <?php 
-    // session_start();
+    session_start();
 
     require_once('../DAO/DAOBook.php');
 
@@ -31,12 +31,12 @@
             ?>
                 <div class="box-container">
                     <form id="formAddCart" method="POST" action="">
-                        <input type="hidden" name="image" value="<?= $book['image']?>">
-                        <input type="hidden" name="title" value="<?= $book['title']?>">
-                        <input type="hidden" name="price" value="<?= $book['price']?>">
+                        <input type="hidden" name="image" value="<?= $book['image'] ?>">
+                        <input type="hidden" name="title" value="<?= $book['title'] ?>">
+                        <input type="hidden" name="price" value="<?= $book['price'] ?>">
                         <img name="image" src="<?= $book['image'] ?>">
                         <p id="title" name="title"><?= $book['title'] ?></p>
-                        <p id="price" name="price">R$ <?=$book['price']?></p>
+                        <p id="price" name="price">R$ <?= $book['price'] ?></p>
                         <button id="buttonBuy" type="submit">Comprar</button>
                     </form>
                 </div>

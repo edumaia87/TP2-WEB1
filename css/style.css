@@ -524,6 +524,22 @@ main h2 {
     width: 40%;
 }
 
+#total-table button {
+    margin-top: 20px;
+    width: 50%;
+    height: 33%;
+    border-radius: 5px;
+
+    background-color: var(--red);
+    color: var(--white);
+}
+
+#total-table button:hover {
+    transition: .2s ease-in-out;
+    background-color: var(--dark-color);
+    cursor: pointer;
+}
+
 #products #qtd-products {
     border: 1px solid #000;
     border-radius: 5px;
