@@ -23,7 +23,8 @@ class DaoBook {
 
     public function listBook() {
         $listBook = [];
-        $pst = Connection::getPreparedStatement('SELECT * FROM book;');
+        $sql = 'SELECT * FROM book;';
+        $pst = Connection::getPreparedStatement($sql);
         $pst->execute();
         $listBook = $pst->fetchAll(PDO::FETCH_ASSOC);
 
@@ -43,7 +44,7 @@ class DaoBook {
 
     public function updateBook(Book $book) {
         try {
-            $sql = 'UPDATE book SET title = ?, author = ?, description = ?, price = ? published_date = ? genre = ?, isbn = ? WHERE id = ?';
+            $sql = 'UPDATE book SET title = ?, author = ?, description = ?, price = ? published_date = ? genre = ?, isbn = ? WHERE id = ?;';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $book->getTitle());
             $pst->bindValue(2, $book->getAuthor());

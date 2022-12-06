@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --red:#df1212;
+    --dark-color:#8a0606;
+}
+
+.add-pub-body {
+    background: rgb(29, 29, 29);
+    color: #000;
+}
+
+/* Menu lateral */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #df1212;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: #FFF;
+    text-align: center;
+    line-height: 70px;
+    background: #8a0606;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    line-height: 65px;
+    font-size: 20px;
+    color: #FFF;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgb(116, 7, 7);
+}
+
+ul li:hover {
+    transition: .4s ease-out;
+    padding-left: 50px;
+}
+
+.sidebar ul a li {
+    margin-right: 16px;
+
+}
+
+#check {
+    display: none;
+}
+
+label #button, label #cancel {
+    background: rgb(116, 7, 7);
+    border-radius: 3px;
+    position: absolute;
+    cursor: pointer;
+}
+
+label #button {
+    left: 10px;
+    top: 25px;
+    font-size: 35px;
+    color: #FFF;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -240px;
+    top: 17px;
+    font-size: 17px;
+    color: rgb(231, 55, 55);
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~.sidebar {
+    left: 0;
+}
+
+#check:checked ~label #button {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~label #cancel {
+    left: 240px;
+}
+
+/* Tabela de pedidos */
+.orders {
+    width: 80%;
+    margin: auto auto;
+    font-size: 15px;
+}
+
+.orders table caption {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Tabela de clientes */
+.clients {
+    width: 80%;
+    margin: auto auto;
+    font-size: 15px;
+}
+
+.clients table caption {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Tabela de editoras */
+.publisher {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto auto;
+    font-size: 15px;
+}
+
+.publisher table caption {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.fa-trash, .fa-pen {
+    font-size: 20px;
+    color: #000;
+}
+
+.fa-trash:hover, .fa-pen:hover {
+    transition: .4s ease-in-out;
+    color: #df1212;
+}
+
+#add-button {
+    margin-top : 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    color: #FFF;
+}
+#add-button:hover {
+    transition: .2s ease-in-out;
+    background: var(--dark-color);
+}
+
+/* Formulário de editora */
+#logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:var(--black);
+}
+
+#logo i {
+    color:var(--red);
+}
+
+.publisher-card {
+    width: 50%;
+    height: 80%;
+    margin: auto auto;
+    padding: 70px 30px 44px;
+    border-radius: 24px;
+    background: #FFF;
+    text-align: center;
+}
+
+.publisher-card > h2 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.publisher-card label {
+    margin: 10px 20px 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.719);
+}
+
+.add-publisher a {
+    color: var(--red); 
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.add-publisher a:hover {
+    transition: .2s ease-in-out;
+    color: var(--dark-color); 
+}
+
+.add-publisher > input {
+    width: 100%;
+    height: 56px;
+    border: 2px solid #2e2e2e;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.add-publisher > input[type='submit'] {
+    margin-top: 20px;
+    width: 100%;
+    height: 56px;
+    border: 0;
+    background: var(--red);
+    color: #F9F9F9;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.add-publisher > input[type='submit']:hover {
+    background-color: var(--dark-color);
+}

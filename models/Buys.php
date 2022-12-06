@@ -3,9 +3,16 @@ class Buys {
     private $id;
     private $bookId;
     private $userId;
-    private $totalBooks;
-    private $totalPrice;
-    private $paymentMethod;
+    private $price;
+    private $saleDate;
+
+    public function __construct($id, $bookId, $userId, $price, $saleDate) {
+        $this->id = $id;
+        $this->bookId = $bookId;
+        $this->userId = $userId;
+        $this->price = $price;
+        $this->saleDate = $saleDate;
+    }
 
     public function getId() {
         return $this->id;
@@ -31,27 +38,19 @@ class Buys {
         $this->userId = $userId;
     }
 
-    public function getTotalBooks() {
-        return $this->totalBooks;
+    public function getprice() {
+        return $this->price;
     }
 
-    public function setTotalBooks($totalBooks) {
-        $this->totalBooks = $totalBooks;
+    public function setprice($price) {
+        $this->price = $price;
     }
 
-    public function getTotalPrice() {
-        return $this->totalPrice;
+    public function getSaleDate() {
+        return $this->saleDate;
     }
 
-    public function setTotalPrice($totalPrice) {
-        $this->totalPrice = $totalPrice;
-    }
-
-    public function getPaymentMethod() {
-        return $this->paymentMethod;
-    }
-
-    public function setPaymentMethod($paymentMethod) {
-        $this->paymentMethod = $paymentMethod;
+    public function setSaleDate($saleDate) {
+        $this->saleDate = $saleDate;
     }
 }

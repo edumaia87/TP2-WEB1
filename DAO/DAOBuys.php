@@ -4,13 +4,12 @@ require_once ('connection.php');
 class DAOBuys {
     public function insertBuy(Buys $buys) {
         try {
-            $sql = 'INSERT INTO buys (book_id, user_id, total_books, total_price, payment_method) VALUES (?, ?, ?, ?, ?);';
+            $sql = 'INSERT INTO buys (book_id, user_id, price, sale_date) VALUES (?, ?, ?, ?);';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $buys->getBookId());
             $pst->bindValue(2, $buys->getUserId());
-            $pst->bindValue(3, $buys->getTotalBooks());
-            $pst->bindValue(4, $buys->getTotalPrice());
-            $pst->bindValue(5, $buys->getPaymentMethod());
+            $pst->bindValue(3, $buys->getPrice());
+            $pst->bindValue(4, $buys->getSaleDate());
 
             if($pst->execute()) return true;
             else return false;
@@ -29,15 +28,32 @@ class DAOBuys {
         return $listBuys;
     }
 
-    public function searchBuy($id) {
-        $listBuys = [];
-        $sql = 'SELECT * FROM buys WHERE id = ?;';
+    public function seearchAllOrders() {
+        $listOrders = [];
+        $sql = 'SELECT book.title, user.name, user.cpf, buys.price, buys.sale_date FROM buys
+        JOIN book ON book.id = buys.book_id
+        JOIN user ON buys.user_id = user.id
+        ORDER BY buys.id DESC;';
+        $pst = Connection::getPreparedStatement($sql);
+        $pst->execute();
+        $listOrders = $pst->fetch(PDO::FETCH_ASSOC);
+
+        return $listOrders;
+    }
+
+    public function searchOrders($id) {
+        $listOrders = [];
+        $sql = 'SELECT book.title, buys.price, buys.sale_date FROM book
+        JOIN buys ON buys.book_id = book.id
+        JOIN user ON buys.user_id = user.id
+        WHERE user.id = ?
+        ORDER BY buys.id DESC;';
         $pst = Connection::getPreparedStatement($sql);
         $pst->bindValue(1, $id);
         $pst->execute();
-        $listBuys = $pst->fetch(PDO::FETCH_ASSOC);
+        $listOrders = $pst->fetch(PDO::FETCH_ASSOC);
 
-        return $listBuys;
+        return $listOrders;
     }
 
     /*public function updateBuy(Buys $buys) {

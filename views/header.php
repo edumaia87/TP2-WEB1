@@ -1,6 +1,6 @@
-<?php 
-    // session_start();
-?> 
+<!-- <?php 
+    session_start();
+?>  -->
 
 <header class="header">
     <div class="header-1">
@@ -16,19 +16,15 @@
                 <li>
                     <?php 
                         if(isset($_SESSION['email'])) {
-                            echo "<p>Bem vindo, " . $_SESSION['email'] . "</p>";
+                            echo "<p>Bem vindo(a), " . $_SESSION['email'] . "</p>";
+                            echo '<ul id="sub-menu">';
+                                echo '<li><a href="editUser.php">Editar perfil</a></li>';
+                                echo '<li><a href="logout.php">Logout</a></li>';
+                            echo '</ul>';
                         } else {
                             echo '<a href="login.php" class="fas fa-user"></a>';
                         }  
                     ?>
-                    <ul id="sub-menu">
-                        <li><a href="editUser.php">Editar perfil</a></li>
-                        <li><a href="logout.php">Logout</a></li>
-                    </ul>
-                </li>
-                <!-- <a href="#" class="fas fa-heart"></a> -->
-                <li>
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
                 </li>
             </ul>
         </div>

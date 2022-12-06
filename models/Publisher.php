@@ -3,13 +3,15 @@
         private $id;
         private $name;
         private $email;
-        private $telefone;
+        private $cellphone;
+        private $cnpj;
 
-        public function __construct($id, $name, $email, $telefone) {
+        public function __construct($id, $name, $email, $cellphone, $cnpj) {
             $this->id = $id;
             $this->name = $name;
             $this->email = $email;
-            $this->telefone = $telefone;
+            $this->cellphone = $cellphone;
+            $this->cnpj = $cnpj;
         }
         
         public function getId() {
@@ -18,7 +20,6 @@
 
         public function setId($id) {
             $this->id = $id;
-            return $this;
         }
 
         public function getName() {
@@ -27,30 +28,29 @@
 
         public function setName($name) {
             $this->name = $name;
-            return $this;
         }
 
-        public function getEmail()
-        {
-                return $this->email;
+        public function getEmail() {
+            return $this->email;
         }
 
-        public function setEmail($email)
-        {
-                $this->email = $email;
-
-                return $this;
+        public function setEmail($email) {
+            $this->email = $email;
         }
 
-        public function getTelefone()
-        {
-                return $this->telefone;
+        public function getCellphone() {
+            return $this->cellphone;
         }
 
-        public function setTelefone($telefone)
-        {
-                $this->telefone = $telefone;
+        public function setCellphone($cellphone) {
+            $this->cellphone = $cellphone;
+        }
 
-                return $this;
+        public function getCnpj() {
+            return $this->cnpj;
+        }
+
+        public function setCnpj($cnpj) {
+            $this->cnpj = $cnpj;
         }
     }

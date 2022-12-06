@@ -4,11 +4,12 @@ require_once ('connection.php');
 class DaoPublisher {
     public function insertPublisher(Publisher $pub) {
         try {
-            $sql = 'INSERT INTO publisher (name, email, telefone) VALUES (?, ?, ?);';
+            $sql = 'INSERT INTO publisher (name, email, telefone, cnpj) VALUES (?, ?, ?, ?);';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $pub->getName());
             $pst->bindValue(2, $pub->getEmail());
-            $pst->bindValue(3, $pub->getTelefone());
+            $pst->bindValue(3, $pub->getCellphone());
+            $pst->bindValue(4, $pub->getCnpj());
 
             if($pst->execute()) return true;
             else return false;
@@ -38,9 +39,12 @@ class DaoPublisher {
 
     public function updatePublisher(Publisher $pub) {
         try {
-            $sql = $sql = 'UPDATE publisher SET name = ?, email = ?, telefone = ? WHERE id = ?';
+            $sql = $sql = 'UPDATE publisher SET name = ?, email = ?, telefone = ?, cnpj = ? WHERE id = ?';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $pub->getName());
+            $pst->bindValue(2, $pub->getEmail());
+            $pst->bindValue(3, $pub->getCellphone());
+            $pst->bindValue(4, $pub->getCnpj());
 
             if($pst->execute()) return $pst->rowCount();
             else return false;

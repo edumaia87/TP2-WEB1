@@ -1,29 +1,30 @@
 window.addEventListener('load', () => {
-    const form = document.querySelector('#formAddCart');
+    const form = document.querySelector('.form-checkout');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
     })
 
-    document.querySelector('#buttonBuy').addEventListener('click', () => {
+    document.querySelector('#submit-button').addEventListener('click', () => {
         const data = new FormData(form);
-        data.append('image', form.image.value);
-        data.append('title', form.title.value);
+        data.append('bookId', form.bookId.value);
+        data.append('userId', form.userId.value);
         data.append('price', form.price.value);
+        data.append('saleDate', form.saleDate.value);
 
         const config = {
             method: 'POST',
             body: data
         }
 
-        fetch('./addToCart.php', config)
+        fetch('./checkout.php', config)
         .then((response) => {
             return response.json();
         })
         .then((json) => {
             if(json.status == 'ok') {
-                alert('Inseriu no carrinho.');
+                alert('Compra realizada com sucesso!');
             } else {
-                alert('Deu ruim.');
+                alert('Não foi possível realizar a compra!');
             }
         })
     })
