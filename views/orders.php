@@ -12,6 +12,9 @@ $listBuys = $daoBuys->searchOrders($userId);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -22,7 +25,7 @@ $listBuys = $daoBuys->searchOrders($userId);
                 <th>Produto</th>
                 <th>Preço</th>
                 <th>Data</th>
-                <th>Ações</th>
+                <th>Cancelar pedido</th>
             </tr>
             <tr>
                 <?php
@@ -31,7 +34,9 @@ $listBuys = $daoBuys->searchOrders($userId);
                 <tr>
                     <td><?= $sale['title'] ?></td>
                     <td><?= $sale['price'] ?></td>
-                    <td><?= $sale['sale_date'] ?></td>
+                    <td><?= $sale['sale_date'] ?></td>d
+                    <td><a id="delete-button" href="#"><i class="fa fa-trash"></i></a></td>
+                </tr>
                 </tr>
                 <?php 
                 }

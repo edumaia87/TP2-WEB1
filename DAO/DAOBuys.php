@@ -36,7 +36,7 @@ class DAOBuys {
         ORDER BY buys.id DESC;';
         $pst = Connection::getPreparedStatement($sql);
         $pst->execute();
-        $listOrders = $pst->fetch(PDO::FETCH_ASSOC);
+        $listOrders = $pst->fetchAll(PDO::FETCH_ASSOC);
 
         return $listOrders;
     }
@@ -51,7 +51,7 @@ class DAOBuys {
         $pst = Connection::getPreparedStatement($sql);
         $pst->bindValue(1, $id);
         $pst->execute();
-        $listOrders = $pst->fetch(PDO::FETCH_ASSOC);
+        $listOrders = $pst->fetchAll(PDO::FETCH_ASSOC);
 
         return $listOrders;
     }

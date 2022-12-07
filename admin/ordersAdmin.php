@@ -30,12 +30,11 @@ $listOrders = $daoOrders->seearchAllOrders();
             foreach($listOrders as $orders) { 
             ?>
             <tr>
-                <td><?= $listOrders['title'] ?></td>
-                <td><?= $listOrders['price'] ?></td>
-                <td><?= $listOrders['sale_date'] ?></td>
-                <td><?= $listOrders['name'] ?></td>
-                <td><?= $listOrders['cpf'] ?></td>
-            </tr>
+                <td><?= $orders['title'] ?></td>
+                <td><?= $orders['price'] ?></td>
+                <td><?= $orders['sale_date'] ?></td>
+                <td><?= $orders['name'] ?></td>
+                <td><?= $orders['cpf'] ?></td>
             <?php 
             }
             ?>
