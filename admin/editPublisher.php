@@ -33,7 +33,7 @@ $listPublisher = $daoPublisher->searchPublisher($id);
             <label for="email">E-mail da Editora</label>
             <input name="email" type="text" value="<?= $listPublisher['email'] ?>">
             <label for="cellphone">Telefone da Editora</label>
-            <input name="cellphone" type="text" value="<?= $listPublisher['telefone'] ?>">
+            <input name="cellphone" type="text" value="<?= $listPublisher['cellphone'] ?>">
             <label for="cnpj">CNPJ da Editora</label>
             <input name="cnpj" type="text" value="<?= $listPublisher['cnpj'] ?>">
             <input type="submit" id="submit-button" value="Adicionar">

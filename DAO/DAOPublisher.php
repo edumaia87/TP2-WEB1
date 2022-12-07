@@ -4,7 +4,7 @@ require_once ('connection.php');
 class DaoPublisher {
     public function insertPublisher(Publisher $pub) {
         try {
-            $sql = 'INSERT INTO publisher (name, email, telefone, cnpj) VALUES (?, ?, ?, ?);';
+            $sql = 'INSERT INTO publisher (name, email, cellphone, cnpj) VALUES (?, ?, ?, ?);';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $pub->getName());
             $pst->bindValue(2, $pub->getEmail());
@@ -40,7 +40,7 @@ class DaoPublisher {
 
     public function updatePublisher(Publisher $pub) {
         try {
-            $sql = $sql = 'UPDATE publisher SET name = ?, email = ?, telefone = ?, cnpj = ? WHERE id = ?';
+            $sql = $sql = 'UPDATE publisher SET name = ?, email = ?, cellphone = ?, cnpj = ? WHERE id = ?';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $pub->getName());
             $pst->bindValue(2, $pub->getEmail());

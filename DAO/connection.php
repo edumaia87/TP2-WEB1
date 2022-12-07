@@ -2,7 +2,7 @@
 class Connection {
     private static $dsn = 'mysql:host=127.0.0.1;dbname=bookstore;port=3306';
     private static $user = 'root';
-    private static $password = 'root';
+    private static $password = 'Iloverock123';
     private static $connection = null;
 
     public static function getConnection() : PDO {

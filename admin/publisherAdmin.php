@@ -31,7 +31,7 @@ $listPublisher = $daoPublisher->listPublisher();
                 <tr>
                     <td><?= $pub['name'] ?></td>
                     <td><?= $pub['email'] ?></td>
-                    <td><?= $pub['telefone'] ?></td>
+                    <td><?= $pub['cellphone'] ?></td>
                     <td><?= $pub['cnpj'] ?></td>
                     <td>
                         <form method="GET" action="editPublisher.php">

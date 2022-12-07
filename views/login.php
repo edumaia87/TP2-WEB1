@@ -17,8 +17,10 @@
             <label for="password">Senha</label>
             <input name="password" type="password" placeholder="Digite sua senha">
             <input id="login-button" name="login" type="submit" value="Login">
+            <div id="message" class="messages"></div>
             <p>Ainda não tem conta? <a href="register.php"><strong>Cadastre-se</strong></a></p>
         </form>
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>

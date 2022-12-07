@@ -30,7 +30,7 @@ $listUser = $daoUser->listUser();
                     <td><?= $user['name'] ?></td>
                     <td><?= $user['email'] ?></td>
                     <td><?= $user['cpf'] ?></td>
-                    <td><?= $user['telefone'] ?></td>
+                    <td><?= $user['cellphone'] ?></td>
                 </tr>
                 <?php 
                 }

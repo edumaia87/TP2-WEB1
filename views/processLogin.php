@@ -16,7 +16,7 @@ if($email && $password) {
     } else if(strlen($password) == 0) {
         $return = ['status' => 'erro', 'message' => 'Preencha sua senha corretamente!'];
     } else {
-        if($user != '') {
+        if($user != null) {
             if(!isset($_SESSION)) {
                 session_start();
             }

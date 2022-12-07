@@ -122,3 +122,17 @@ p, a { font-size: 16px; }
 #login-form > input[type='submit']:hover {
     background-color: var(--dark-color);
 }
+
+.messages {
+    display: none;
+}
+
+.hidden-message {
+    width: 100%;
+    margin: auto auto;
+    padding: 15px;
+    background: var(--red);
+    color: #FFF;
+    border-radius: 17px;
+    font-size: 15px;
+}

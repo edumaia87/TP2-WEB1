@@ -5,16 +5,16 @@ class User {
     private $email;
     private $password;
     private $cpf;
-    private $telefone;
+    private $cellphone;
     private $userType;
 
-    public function __construct($id, $name, $email, $password, $cpf, $telefone, $userType) {
+    public function __construct($id, $name, $email, $password, $cpf, $cellphone, $userType) {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
         $this->cpf = $cpf;
-        $this->telefone = $telefone;
+        $this->cellphone = $cellphone;
         $this->userType = $userType;
     }
 
@@ -59,12 +59,12 @@ class User {
         return $this;
     }
 
-    public function getTelefone() {
-        return $this->telefone;
+    public function getCellphone() {
+        return $this->cellphone;
     }
 
-    public function setTelefone($telefone) {
-        $this->telefone = $telefone;
+    public function setCellphone($cellphone) {
+        $this->cellphone = $cellphone;
     }
 
     public function getUserType() {
