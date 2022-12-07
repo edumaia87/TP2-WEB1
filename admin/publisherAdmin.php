@@ -33,7 +33,12 @@ $listPublisher = $daoPublisher->listPublisher();
                     <td><?= $pub['email'] ?></td>
                     <td><?= $pub['telefone'] ?></td>
                     <td><?= $pub['cnpj'] ?></td>
-                    <td><a id="update-button" href="editPublisher.php"><i class="fa fa-pen"></i></a></td>
+                    <td>
+                        <form method="GET" action="editPublisher.php">
+                            <input type="hidden" name="id" value="<?= $pub['id'] ?>">
+                            <button type="submit" id="update-button"><i class="fa fa-pen"></i></button>
+                        </form>
+                    </td>
                     <td><a id="delete-button" href="#"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 <?php 

@@ -1,4 +1,16 @@
 <?php
+require_once ('../DAO/DAOPublisher.php');
+require_once ('../models/Publisher.php');
+
+$id = filter_input(INPUT_GET, 'id');
+// $name = filter_input(INPUT_POST, 'name');
+// $email = filter_input(INPUT_POST, 'email');
+// $cellphone = filter_input(INPUT_POST, 'cellphone');
+// $cnpj = filter_input(INPUT_POST, 'cnpj');
+
+$daoPublisher = new DaoPublisher();
+$listPublisher = $daoPublisher->searchPublisher($id);
+// $publisher = new Publisher($id, $name, $email, $cellphone, $cnpj);
 
 ?>
 <!DOCTYPE html>
@@ -15,19 +27,19 @@
     <div class="publisher-card">
         <h2 id="logo"><i class="fas fa-book"></i> Cantinho da Leitura</h2>
         <h3>Edição dos dados da editora</h3>
-        <form class="add-publisher" method="post" action="">
+        <form class="edit-publisher" method="POST" action="">
             <label for="name">Nome da Editora</label>
-            <input name="name" type="text" placeholder="Digite o nome da editora">
+            <input name="name" type="text" value="<?= $listPublisher['name'] ?>">
             <label for="email">E-mail da Editora</label>
-            <input name="email" type="text" placeholder="Digite o e-mail da editora">
+            <input name="email" type="text" value="<?= $listPublisher['email'] ?>">
             <label for="cellphone">Telefone da Editora</label>
-            <input name="cellphone" type="text" placeholder="Digite o telefone da editora">
+            <input name="cellphone" type="text" value="<?= $listPublisher['telefone'] ?>">
             <label for="cnpj">CNPJ da Editora</label>
-            <input name="cnpj" type="text" placeholder="Digite o CNPJ da editora">
+            <input name="cnpj" type="text" value="<?= $listPublisher['cnpj'] ?>">
             <input type="submit" id="submit-button" value="Adicionar">
             <a href="publisherAdmin.php">Voltar para a listagem de editoras</a>
         </form>
     </div>
-    <script src="../js/addPublisher.js"></script>
+    <script src="../js/editPublisher.js"></script>
 </body>
 </html>
