@@ -1,4 +1,5 @@
 <?php
+
 require_once ('../DAO/DAOPublisher.php');
 require_once ('../models/Publisher.php');
 
