@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
 
     document.querySelector('#submit-button').addEventListener('click', () => {
         const data = new FormData(form);
+        data.append('id', form.id.value);
         data.append('name', form.name.value);
         data.append('email', form.email.value);
         data.append('cellphone', form.cellphone.value);

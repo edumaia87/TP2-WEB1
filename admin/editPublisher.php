@@ -3,15 +3,9 @@ require_once ('../DAO/DAOPublisher.php');
 require_once ('../models/Publisher.php');
 
 $id = filter_input(INPUT_GET, 'id');
-// $name = filter_input(INPUT_POST, 'name');
-// $email = filter_input(INPUT_POST, 'email');
-// $cellphone = filter_input(INPUT_POST, 'cellphone');
-// $cnpj = filter_input(INPUT_POST, 'cnpj');
 
 $daoPublisher = new DaoPublisher();
 $listPublisher = $daoPublisher->searchPublisher($id);
-// $publisher = new Publisher($id, $name, $email, $cellphone, $cnpj);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,6 +22,7 @@ $listPublisher = $daoPublisher->searchPublisher($id);
         <h2 id="logo"><i class="fas fa-book"></i> Cantinho da Leitura</h2>
         <h3>Edição dos dados da editora</h3>
         <form class="edit-publisher" method="POST" action="">
+            <input type="hidden" name="id" value="<?= $id ?>">
             <label for="name">Nome da Editora</label>
             <input name="name" type="text" value="<?= $listPublisher['name'] ?>">
             <label for="email">E-mail da Editora</label>

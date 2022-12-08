@@ -40,12 +40,13 @@ class DaoPublisher {
 
     public function updatePublisher(Publisher $pub) {
         try {
-            $sql = $sql = 'UPDATE publisher SET name = ?, email = ?, cellphone = ?, cnpj = ? WHERE id = ?';
+            $sql = 'UPDATE publisher SET name = ?, email = ?, cellphone = ?, cnpj = ? WHERE id = ?;';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $pub->getName());
             $pst->bindValue(2, $pub->getEmail());
             $pst->bindValue(3, $pub->getCellphone());
             $pst->bindValue(4, $pub->getCnpj());
+            $pst->bindValue(5, $pub->getId());
 
             if($pst->execute()) return $pst->rowCount();
             else return false;
