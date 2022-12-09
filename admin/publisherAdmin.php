@@ -39,7 +39,13 @@ $listPublisher = $daoPublisher->listPublisher();
                             <button type="submit" id="update-button"><i class="fa fa-pen"></i></button>
                         </form>
                     </td>
-                    <td><a id="delete-button" href="#"><i class="fa fa-trash"></i></a></td>
+                    <td>
+                        <form class="delete-publisher" method="POST" action="deletePublisher.php">
+                            <input type="hidden" name="id" value="<?= $pub['id'] ?>">
+                            <button type="submit" id="delete-button"><i class="fa fa-trash"></i></button>
+                        </form>
+                        
+                    </td>
                 </tr>
                 <?php 
                 }

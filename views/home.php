@@ -1,7 +1,8 @@
 <?php 
-    session_start();
-
-    $userId = $_SESSION['id'];
+    if(!isset($_SESSION)) {
+        session_start();
+        $userId = $_SESSION['id'];
+    }
     require_once('../DAO/DAOBook.php');
 
     $date = date('y-m-d');

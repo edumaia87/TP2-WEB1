@@ -25,6 +25,7 @@ if($email && $password) {
 
             $_SESSION['id'] = $data['id'];
             $_SESSION['email'] = $data['email'];
+            $_SESSION['name'] = $data['name'];
 
             if($data['user_type'] == 'admin') {
                 $return = ['status' => 'ok', 'type' => 'admin'];

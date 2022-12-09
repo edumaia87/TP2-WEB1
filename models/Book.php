@@ -10,16 +10,17 @@ class Book {
     private $genre;
     private $isbn;
 
-    // public function __construct($id, $title, $author, $description, $price, $publishedDate, $genre, $isbn) {
-    //     $this->id = $id;
-    //     $this->title = $title;
-    //     $this->author = $author;
-    //     $this->description = $description;
-    //     $this->price = $price;
-    //     $this->publishedDate = $publishedDate;
-    //     $this->genre = $genre;
-    //     $this->isbn = $isbn;
-    // }
+    public function __construct($id, $title, $image, $author, $description, $price, $publishedDate, $genre, $isbn) {
+        $this->id = $id;
+        $this->title = $title;
+        $this->image = $image;
+        $this->author = $author;
+        $this->description = $description;
+        $this->price = $price;
+        $this->publishedDate = $publishedDate;
+        $this->genre = $genre;
+        $this->isbn = $isbn;
+    }
 
     public function getId() {
         return $this->id;

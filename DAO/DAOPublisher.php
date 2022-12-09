@@ -29,7 +29,7 @@ class DaoPublisher {
 
     public function searchPublisher($id) {
         $listPublisher = [];
-        $sql = 'SELECT * FROM publisher WHERE id = ?';
+        $sql = 'SELECT * FROM publisher WHERE id = ?;';
         $pst = Connection::getPreparedStatement($sql);
         $pst->bindValue(1, $id);
         $pst->execute();

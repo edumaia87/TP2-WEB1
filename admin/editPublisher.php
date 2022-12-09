@@ -32,7 +32,7 @@ $listPublisher = $daoPublisher->searchPublisher($id);
             <input name="cellphone" type="text" value="<?= $listPublisher['cellphone'] ?>">
             <label for="cnpj">CNPJ da Editora</label>
             <input name="cnpj" type="text" value="<?= $listPublisher['cnpj'] ?>">
-            <input type="submit" id="submit-button" value="Adicionar">
+            <input type="submit" id="submit-button" value="Atualizar">
             <a href="publisherAdmin.php">Voltar para a listagem de editoras</a>
         </form>
     </div>
