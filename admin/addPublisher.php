@@ -12,7 +12,7 @@
     <div class="publisher-card">
         <h2 id="logo"><i class="fas fa-book"></i> Cantinho da Leitura</h2>
         <h3>Cadastro dos dados da editora</h3>
-        <form class="add-publisher" method="post" action="">
+        <form class="add-publisher" method="POST" action="">
             <label for="name">Nome da Editora</label>
             <input name="name" type="text" placeholder="Digite o nome da editora">
             <label for="email">E-mail da Editora</label>

@@ -64,12 +64,12 @@ class DaoBook {
         }
     }
 
-    public function deleteBook(User $book) {
+    public function deleteBook(Book $book) {
         try {
             $sql = 'DELETE FROM book WHERE id = ?;';
             $pst = Connection::getPreparedStatement($sql);
-            
             $pst->bindValue(1, $book->getId());
+            
             if ($pst->execute()) return $pst->rowCount();
             else return false;
         } catch (PDOException $e) {

@@ -18,7 +18,7 @@
                         if(isset($_SESSION['name'])) {
                             echo "<p>Bem vindo(a), " . $_SESSION['name'] . "</p>";
                             echo '<ul id="sub-menu">';
-                                echo '<li><a href="editUser.php">Configurações</a></li>';
+                                echo '<li><a href="editUser.php">Meu perfil</a></li>';
                                 echo '<li><a href="logout.php">Logout</a></li>';
                             echo '</ul>';
                         } else {

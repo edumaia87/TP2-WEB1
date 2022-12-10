@@ -396,3 +396,33 @@ label #cancel {
 .edit-book > input[type='submit']:hover {
     background-color: var(--dark-color);
 }
+
+.add-publish a {
+    color: var(--red); 
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.add-publish a:hover {
+    transition: .2s ease-in-out;
+    color: var(--dark-color); 
+}
+
+.add-publish > input {
+    width: 100%;
+    height: 56px;
+    border: 2px solid #2e2e2e;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.add-publish > input[type='submit'] {
+    margin-top: 20px;
+    width: 100%;
+    height: 56px;
+    border: 0;
+    background: var(--red);
+    color: #F9F9F9;
+    font-weight: 600;
+    font-size: 16px;
+}

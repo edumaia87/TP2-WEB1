@@ -13,7 +13,7 @@
         <h2 id="logo"><i class="fas fa-book"></i> Cantinho da Leitura</h2>
         <h3>Cadastro de livro</h3>
         <form class="add-book" method="post" action="">
-            <<input type="hidden" name="id">
+            <input type="hidden" name="id">
             <label for="title">Título do livro</label>
             <input name="title" type="text" placeholder="Digite o título do livro">
             <label for="image">Imagem do livro</label>

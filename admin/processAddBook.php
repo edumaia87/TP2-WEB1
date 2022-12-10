@@ -11,13 +11,12 @@ $publishedDate = filter_input(INPUT_POST, 'publishedDate');
 $genre = filter_input(INPUT_POST, 'genre');
 $isbn = filter_input(INPUT_POST, 'isbn');
 
-
 $return = [];
 
 if($title && $image && $author && $description && $price && $publishedDate && $genre && $isbn) {
+    $daoBook = new DaoBook();
     $book = new Book(null, $title, $image, $author, $description, $price, $publishedDate, $genre, $isbn);
-    $daoPublisher = new DaoBook();
-    if($daoPublisher->insertBook($book)) {
+    if($daoBook->insertBook($book)) {
         $return = ['status' => 'ok'];
     } else {
         $return = ['status' => 'sla'];

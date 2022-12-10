@@ -81,4 +81,17 @@ class DAOBuys {
            return false;
         }
     } 
+
+    public function deleteByBookId(Buys $buys) {
+        try {
+            $sql = 'DELETE FROM buys WHERE book_id = ?;';
+            $pst = Connection::getPreparedStatement($sql);
+            $pst->bindValue(1, $buys->getBookId());
+
+            if($pst->execute()) return $pst->rowCount();
+            else return false;
+        } catch (PDOException $e) {
+           return false;
+        }
+    } 
 }

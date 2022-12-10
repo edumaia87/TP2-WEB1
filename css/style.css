@@ -600,3 +600,71 @@ th {
     transition: .2s ease-in-out;
     background-color: var(--dark-color);
 }
+
+/* Menu de opções do usuário */
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 15vh;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.profile-circle {
+    padding: 10px;
+    border: 2px solid var(--red);
+    border-radius: 20%;
+}
+
+.fa-user {
+    font-size: 30px;
+    color: var(--red);
+}
+
+.profile-info h2 {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    height: 80vh;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.my-data {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgb(202, 200, 200);
+}
+
+.my-data a {
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--black)
+}
+
+.my-data a:hover {
+    color: var(--red);
+}
