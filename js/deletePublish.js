@@ -1,31 +1,30 @@
 window.addEventListener('load', () => {
-    const form = document.querySelector('.add-publish');
+    const form = document.querySelector('.delete-publish');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
     })
 
     document.querySelector('#submit-button').addEventListener('click', () => {
         const data = new FormData(form);
-        data.append('publisherId', form.publisherId.value);
-        data.append('bookId', form.bookId.value);
+        data.append('id', form.id.value);
 
         const config = {
             method: 'POST',
             body: data
         }
 
-        fetch('./processAddPublish.php', config)
+        fetch('./processDeletePublish.php', config)
         .then((response) => {
             return response.json();
         })
         .then((json) => {
             if (json.status == 'ok') {
-                alert('Publicação adicionada com sucesso!');
+                alert('Publicação deletada com sucesso!');
                 window.location.href = 'publishAdmin.php';
             } else if (json.status == 'sla') {
                 alert('Erro');
-            } else { 
-                alert('Não foi possível adicionar a publicação!');
+            } else {
+                alert('Não foi possível deletar a publicação!');
             }
         })
     });

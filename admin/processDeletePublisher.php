@@ -12,7 +12,7 @@ if($id) {
     $daoPublish = new DaoPublish();
 
     $publisher = new Publisher($id, null, null, null, null);
-    $publish = new Publish($id, null);
+    $publish = new Publish(null, $id, null);
 
     if($daoPublish->deletePubByPubId($publish)) {
         if($daoPublisher->deletePublisher($publisher)) {

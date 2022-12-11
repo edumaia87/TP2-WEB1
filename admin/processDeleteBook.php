@@ -15,7 +15,7 @@ if($id) {
     $daoPublish = new DaoPublish();
 
     $buys = new Buys(null, $id, null, null, null);
-    $publish = new Publish(null, $id);
+    $publish = new Publish(null, null, $id);
     $book = new Book($id, null, null, null, null, null, null, null, null);
 
     if($daoBuys->deleteByBookId($buys) || $daoPublish->deletePubByBookId($publish)) {

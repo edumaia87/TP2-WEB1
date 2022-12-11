@@ -2,16 +2,14 @@
 require_once('../DAO/DAOPublish.php');
 require_once('../models/Publish.php');
 
-$publisherId = filter_input(INPUT_POST, 'publisherId');
-$bookId = filter_input(INPUT_POST, 'bookId');
-
-$daoPublish = new DaoPublish();
-$publish = new Publish(null, $publisherId, $bookId);
-
+$id = filter_input(INPUT_POST, 'id');
 $return = [];
 
-if($publisherId && $bookId) {
-    if($daoPublish->insertPublish($publish)) {
+if($id) {
+    $daoPublish = new DaoPublish();
+    $publish = new Publish($id, null, null);
+
+    if($daoPublish->deletePublish($publish)) {
         $return = ['status' => 'ok'];
     } else {
         $return = ['status' => 'sla'];

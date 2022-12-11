@@ -20,13 +20,26 @@ class DAOBuys {
 
     public function listBuy() {
         $listBuys = [];
-        $sql = 'SELECT * FROM buys';
+        $sql = 'SELECT * FROM buys;';
         $pst = Connection::getPreparedStatement($sql);
         $pst->execute();
         $listBuys = $pst->fetchAll(PDO::FETCH_ASSOC);
 
         return $listBuys;
     }
+
+    public function listOrder($id) {
+        $listBuys = [];
+        $sql = 'SELECT * FROM buys WHERE id = ?;';
+        $pst = Connection::getPreparedStatement($sql);
+        $pst->bindValue(1, $id);
+        $pst->execute();
+        $listBuys = $pst->fetchAll(PDO::FETCH_ASSOC);
+
+        return $listBuys;
+    }
+
+
 
     public function seearchAllOrders() {
         $listOrders = [];
@@ -43,7 +56,7 @@ class DAOBuys {
 
     public function searchOrders($id) {
         $listOrders = [];
-        $sql = 'SELECT book.title, buys.price, buys.sale_date FROM book
+        $sql = 'SELECT buys.id, book.title, buys.price, buys.sale_date FROM book
         JOIN buys ON buys.book_id = book.id
         JOIN user ON buys.user_id = user.id
         WHERE user.id = ?
@@ -73,7 +86,7 @@ class DAOBuys {
         try {
             $sql = 'DELETE FROM buys WHERE id = ?;';
             $pst = Connection::getPreparedStatement($sql);
-            $pst->bindValue(1, $buys->getUserId());
+            $pst->bindValue(1, $buys->getId());
 
             if($pst->execute()) return $pst->rowCount();
             else return false;
@@ -87,6 +100,19 @@ class DAOBuys {
             $sql = 'DELETE FROM buys WHERE book_id = ?;';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $buys->getBookId());
+
+            if($pst->execute()) return $pst->rowCount();
+            else return false;
+        } catch (PDOException $e) {
+           return false;
+        }
+    }
+
+    public function deleteByUserId(Buys $buys) {
+        try {
+            $sql = 'DELETE FROM buys WHERE user_id = ?;';
+            $pst = Connection::getPreparedStatement($sql);
+            $pst->bindValue(1, $buys->getUserId());
 
             if($pst->execute()) return $pst->rowCount();
             else return false;

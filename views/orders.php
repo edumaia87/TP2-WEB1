@@ -35,7 +35,12 @@ $listBuys = $daoBuys->searchOrders($userId);
                     <td><?= $sale['title'] ?></td>
                     <td><?= $sale['price'] ?></td>
                     <td><?= $sale['sale_date'] ?></td>d
-                    <td><a id="delete-button" href="#"><i class="fa fa-trash"></i></a></td>
+                    <td>
+                        <form class="cancel-order" method="POST" action="cancelOrder.php">
+                            <input type="hidden" name="id" value="<?= $sale['id'] ?>">
+                            <button type="submit"><i class="fa fa-trash"></i></button>
+                        </form>
+                    </td>
                 </tr>
                 </tr>
                 <?php 

@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    const form = document.querySelector('.add-publish');
+    const form = document.querySelector('.edit-publish');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
     })
@@ -14,19 +14,19 @@ window.addEventListener('load', () => {
             body: data
         }
 
-        fetch('./processAddPublish.php', config)
+        fetch('./processEditPublish.php', config)
         .then((response) => {
             return response.json();
         })
         .then((json) => {
             if (json.status == 'ok') {
-                alert('Publicação adicionada com sucesso!');
+                alert('Dados atualizados com sucesso!');
                 window.location.href = 'publishAdmin.php';
-            } else if (json.status == 'sla') {
+            } else if (json.status == 'sla') { 
                 alert('Erro');
-            } else { 
-                alert('Não foi possível adicionar a publicação!');
+            } else {
+                alert('Não foi possível realizar a atualização!');
             }
         })
-    });
-});
+    })
+})

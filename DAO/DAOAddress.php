@@ -63,4 +63,17 @@ class DaoAddress {
             return false;
         }
     }
+
+    public function deleteAddressByUserId(Address $address) {
+        try {
+            $sql = 'DELETE FROM address WHERE user_id = ?;';
+            $pst = Connection::getPreparedStatement($sql);
+            $pst->bindValue(1, $address->getUserId());
+
+            if($pst->execute()) return $pst->rowCount();
+            else return false;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
 }

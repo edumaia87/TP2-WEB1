@@ -57,6 +57,7 @@ window.addEventListener('load', () => {
             .then((json) => {
                 if (json.status == 'ok') {
                     alert('Endereço cadastrado com sucesso!');
+                    window.location.href = 'myAddresses.php';
                 } else {
                     alert('Não foi possível cadastrar o endereço!');
                 }

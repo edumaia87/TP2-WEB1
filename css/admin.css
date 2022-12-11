@@ -271,7 +271,7 @@ label #cancel {
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: auto auto;
+    margin: 30px auto;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 15px;
@@ -417,6 +417,36 @@ label #cancel {
 }
 
 .add-publish > input[type='submit'] {
+    margin-top: 20px;
+    width: 100%;
+    height: 56px;
+    border: 0;
+    background: var(--red);
+    color: #F9F9F9;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.edit-publish a {
+    color: var(--red); 
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.edit-publish a:hover {
+    transition: .2s ease-in-out;
+    color: var(--dark-color); 
+}
+
+.edit-publish > input {
+    width: 100%;
+    height: 56px;
+    border: 2px solid #2e2e2e;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.edit-publish > input[type='submit'] {
     margin-top: 20px;
     width: 100%;
     height: 56px;

@@ -26,7 +26,7 @@
         </div>
         <div class="delete-account">
             <span class="profile-circle"><i class="fa fa-eraser"></i></span>
-            <a href="#">Deletar conta</a>
+            <a href="deleteAccount.php">Deletar conta</a>
         </div>
     </div>
 

@@ -34,7 +34,7 @@ $listPublish = $daoPublish->listPublish();
                     <td><?= $pub['name'] ?></td>
                     <td><?= $pub['published_date'] ?></td>
                     <td>
-                        <form method="GET" action="editPublish.php">
+                        <form method="POST" action="editPublish.php">
                             <input type="hidden" name="id" value="<?= $pub['id'] ?>">
                             <button type="submit" id="update-button"><i class="fa fa-pen"></i></button>
                         </form>

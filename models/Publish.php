@@ -1,11 +1,21 @@
 <?php
 class Publish {
+    private $id;
     private $publisherId;
     private $bookId;
 
-    public function __construct($publisherId, $bookId) {
+    public function __construct($id, $publisherId, $bookId) {
+        $this->id = $id;
         $this->publisherId = $publisherId;
         $this->bookId = $bookId;
+    }
+
+    public function getId() {
+        return $this->id;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
     }
 
     public function getPublisherId() {
