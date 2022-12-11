@@ -136,3 +136,37 @@ p, a { font-size: 16px; }
     border-radius: 17px;
     font-size: 15px;
 }
+
+.edit-address {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+    padding: 10px;
+}
+
+a { font-size: 16px; }
+
+.edit-address a { color: var(--red); }
+
+.edit-address > input {
+    width: 100%;
+    height: 56px;
+    border: 2px solid #2e2e2e;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.edit-address > input[type='submit'] {
+    width: 100%;
+    height: 56px;
+    border: 0;
+    background: var(--red);
+    color: #F9F9F9;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.edit-address > input[type='submit']:hover {
+    background-color: var(--dark-color);
+}

@@ -18,5 +18,6 @@
         <li><a href="publisherAdmin.php"><i class="fas fas fa-briefcase"></i> Editoras</a></li>
         <li><a href="productsAdmin.php"><i class="fas fa-book-open"></i> Produtos</a></li>
         <li><a href="publishAdmin.php"><i class="fas fa-upload"></i> Publicação</a></li>
+        <li><a href="logoutAdmin.php"><i class="fas fa-upload"></i> Logout</a></li>
     </ul>
 </div>

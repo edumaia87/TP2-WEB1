@@ -28,7 +28,7 @@
                 <option value="">Escolha a cidade aonde você mora:</option>
             </select>
             <input id="submit-button" name="register" type="submit" value="Cadastrar">
-            <p><a href="checkoutPage.php"><strong>Voltar a tela de confirmação</strong></a></p>
+            <p><a href="myAddresses.php"><strong>Ir a tela de endereços</strong></a></p>
         </form>
     </div>
 

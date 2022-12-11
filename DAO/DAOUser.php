@@ -29,11 +29,11 @@ class DaoUser {
         return $listUser;
     }
 
-    public function searchUser(User $user) {
+    public function searchUser($id) {
         $listUser = [];
-        $sql = 'SELECT * FROM user WHERE id = ?';
+        $sql = 'SELECT * FROM user WHERE id = ?;';
         $pst = Connection::getPreparedStatement($sql);
-        $pst->bindValue(1, $user->getId());
+        $pst->bindValue(1, $id);
         $pst->execute();
         $listUser = $pst->fetchAll(PDO::FETCH_ASSOC);
 
@@ -55,13 +55,14 @@ class DaoUser {
 
     public function updateUser(User $user) {
         try {
-            $sql = $sql = 'UPDATE user SET name = ?, email = ?, password = ? cpf = ? cellphone = ? WHERE id = ?';
+            $sql = 'UPDATE user SET name = ?, email = ?, password = ?, cpf = ?, cellphone = ? WHERE id = ?;';
             $pst = Connection::getPreparedStatement($sql);
             $pst->bindValue(1, $user->getName());
             $pst->bindValue(2, $user->getEmail());
             $pst->bindValue(3, $user->getPassword());
             $pst->bindValue(4, $user->getCpf());
             $pst->bindValue(5, $user->getCellphone());
+            $pst->bindValue(6, $user->getId());
 
             if($pst->execute()) return $pst->rowCount();
             else return false;

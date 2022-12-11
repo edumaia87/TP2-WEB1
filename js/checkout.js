@@ -23,6 +23,7 @@ window.addEventListener('load', () => {
         .then((json) => {
             if(json.status == 'ok') {
                 alert('Compra realizada com sucesso!');
+                window.location.href = 'home.php';
             } else {
                 alert('Não foi possível realizar a compra!');
             }

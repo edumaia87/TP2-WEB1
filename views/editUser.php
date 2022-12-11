@@ -18,7 +18,15 @@
     <div class="profile-content">
         <div class="my-data">
             <span class="profile-circle"><i class="fa fa-user"></i></span>
-            <a href="#">Meus dados</a>
+            <a href="myData.php">Meus dados</a>
+        </div>
+        <div class="addresses">
+            <span class="profile-circle"><i class="fa fa-location-arrow"></i></span>
+            <a href="myAddresses.php">Endereços</a>
+        </div>
+        <div class="delete-account">
+            <span class="profile-circle"><i class="fa fa-eraser"></i></span>
+            <a href="#">Deletar conta</a>
         </div>
     </div>
 
