@@ -39,8 +39,10 @@ foreach($data as $user) {
                 <p>Telefone: <?= $user['cellphone'] ?></p>
             </div>
         </div>
-        <a href="editData.php" id="edit-data">Editar dados</a>
-        <a href="editUser.php" id="edit-data">Voltar</a>
+        <div class="actions">
+            <a href="editData.php" id="edit-data">Editar dados</a>
+            <a href="editUser.php" id="edit-data">Voltar</a>
+        </div>
     </div>
 
     <?php include 'footer.php' ?>

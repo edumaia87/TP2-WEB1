@@ -34,7 +34,7 @@ foreach($data as $user) {
             <label for="password">Senha</label>
             <input name="password" type="password" value="<?= $user['password'] ?>">
             <label for="cpf">CPF</label>
-            <input name="cpf" type="text" value="<?= $user['cpf'] ?>">
+            <input id="cpf" name="cpf" type="text" maxlength="14" value="<?= $user['cpf'] ?>">
             <label for="cellphone">Telefone</label>
             <input name="cellphone" type="text" value="<?= $user['cellphone'] ?>">
             <input id="submit-button" type="submit" value="Atualizar">
@@ -42,5 +42,6 @@ foreach($data as $user) {
         </form>
     </div>
     <script src="../js/editUser.js"></script>
+    <script src="../js/mask.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@ window.addEventListener('load', () => {
         .then((json) => {
             if (json.status == 'ok') {
                 alert('Dados atualizados com sucesso!');
+                window.location.href = 'myData.php';
             } else if (json.status == 'sla') { 
                 alert('Erro');
             } else {

@@ -18,13 +18,14 @@
             <label for="email">E-mail da Editora</label>
             <input name="email" type="text" placeholder="Digite o e-mail da editora">
             <label for="cellphone">Telefone da Editora</label>
-            <input name="cellphone" type="text" placeholder="Digite o telefone da editora">
+            <input id="cellphone" name="cellphone" type="text" maxlength="14" placeholder="Digite o telefone da editora">
             <label for="cnpj">CNPJ da Editora</label>
-            <input name="cnpj" type="text" placeholder="Digite o CNPJ da editora">
+            <input id="cnpj" name="cnpj" type="text" maxlength="18" placeholder="Digite o CNPJ da editora" onkeypress="cnpjMask()">
             <input type="submit" id="submit-button" value="Adicionar">
             <a href="publisherAdmin.php">Voltar para a listagem de editoras</a>
         </form>
     </div>
     <script src="../js/addPublisher.js"></script>
+    <script src="../js/mask.js"></script>
 </body>
 </html>

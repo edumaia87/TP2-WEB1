@@ -20,7 +20,7 @@
             <label for="password">Senha</label>
             <input name="password" type="password" placeholder="Digite sua senha">
             <label for="cpf">CPF</label>
-            <input name="cpf" type="text" placeholder=" digite seu CPF" maxlength="11">
+            <input id="cpf" name="cpf" type="text" placeholder=" digite seu CPF" maxlength="14" autocomplete="off">
             <label for="cellphone">Telefone</label>
             <input name="cellphone" type="text" placeholder="Digite seu telefone">
             <input id="submit-button" name="register" type="submit" value="Cadastrar">
@@ -28,5 +28,6 @@
         </form>
     </div>
     <script src="../js/processRegister.js"></script>
+    <script src="../js/mask.js"></script>
 </body>
 </html>
