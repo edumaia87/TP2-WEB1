@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Dez-2022 às 12:41
+-- Tempo de geração: 12-Dez-2022 às 12:47
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.1.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `bookstore`
 --
+CREATE DATABASE IF NOT EXISTS `bookstore` DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci;
+USE `bookstore`;
 
 -- --------------------------------------------------------
 
