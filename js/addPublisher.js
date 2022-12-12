@@ -23,6 +23,9 @@ window.addEventListener('load', () => {
         .then((json) => {
             if (json.status == 'ok') {
                 alert('Editora adicionada com sucesso!');
+                window.location.href = 'publisherAdmin.php';
+            } else if (json.status == 'sla') {
+                alert('Erro');
             } else {
                 alert('Não foi possível adicionar a editora!');
             }

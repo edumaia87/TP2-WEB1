@@ -34,9 +34,9 @@ foreach($data as $user) {
             <label for="password">Senha</label>
             <input name="password" type="password" value="<?= $user['password'] ?>">
             <label for="cpf">CPF</label>
-            <input id="cpf" name="cpf" type="text" maxlength="14" value="<?= $user['cpf'] ?>">
+            <input id="cpf" name="cpf" type="text" maxlength="14" value="<?= $user['cpf'] ?>" onkeypress="cpfMask()">
             <label for="cellphone">Telefone</label>
-            <input name="cellphone" type="text" value="<?= $user['cellphone'] ?>">
+            <input name="cellphone" type="text" maxlength="14" value="<?= $user['cellphone'] ?>">
             <input id="submit-button" type="submit" value="Atualizar">
             <p><a href="myData.php"><strong>Voltar para tela Meus dados</strong></a></p>
         </form>

@@ -24,6 +24,9 @@ window.addEventListener('load', () => {
         .then((json) => {
             if (json.status == 'ok') {
                 alert('Dados da editora atualizada com sucesso!');
+                window.location.href = 'publisherAdmin.php';
+            } else if (json.status == 'sla') {
+                alert('Erro');
             } else {
                 alert('Não foi possível atualizar os dados da editora!');
             }

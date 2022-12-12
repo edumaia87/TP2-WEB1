@@ -44,7 +44,7 @@ foreach($data as $address) {
                     echo "</div>";
                 } else {
                     echo "<h2>Parece que você não tem endereço cadastrado</h2>";
-                    echo '<a href="addAddress.php" id="edit-data">Adicionnar endereço</a>';
+                    echo '<a href="addAddress.php" id="edit-data">Adicionar endereço</a>';
                 }
             ?>
         </div>

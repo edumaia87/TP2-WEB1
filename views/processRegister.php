@@ -18,7 +18,7 @@ if($name && $email && $password && $cpf && $cellphone) {
     if($daoUser->insertUser($user)){
         $return = ['status' => 'ok'];
     } else {
-        echo "Não foi possível realizar o cadastro.";
+        $return = ['status' => 'sla'];
     }
 } else {
     $return = ['status' => 'erro'];

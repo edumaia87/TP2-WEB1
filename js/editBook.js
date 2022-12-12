@@ -28,6 +28,7 @@ window.addEventListener('load', () => {
         .then((json) => {
             if (json.status == 'ok') {
                 alert('Dados do livro atualizados com sucesso!');
+                window.location.href = 'productsAdmin.php';
             } else if (json.status == 'sla') {
                 alert('Erro');
             } else {

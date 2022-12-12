@@ -11,10 +11,11 @@ $return = [];
 
 if($id) {
     $daoUser = new DaoUser();
-    $user = new User($id, null, null, null, null, null, null);
     $daoAddress = new DaoAddress();
-    $address = new Address(null, $id, null, null, null, null, null);
     $daoBuys = new DaoBuys();
+    
+    $user = new User($id, null, null, null, null, null, null);
+    $address = new Address(null, $id, null, null, null, null, null);
     $buys = new Buys(null, null, $id, null, null);
 
     if($daoAddress->deleteAddressByUserId($address) || $daoBuys->deleteByUserId($buys)) {

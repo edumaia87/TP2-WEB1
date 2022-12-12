@@ -24,6 +24,9 @@ window.addEventListener('load', () => {
         .then((json) => {
             if (json.status == 'ok') {
                 alert('Cadastro realizado com sucesso!');
+                window.location.href = 'login.php';
+            } else if (json.status == 'sla') {
+                alert('Erro');
             } else {
                 alert('Não foi possível realizar o cadastro!');
             }

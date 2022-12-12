@@ -20,7 +20,7 @@ $listUser = $daoUser->searchUser($id);
     <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
-    <?php include 'header.php' ?>z
+    <?php include 'header.php' ?>
     <div class="delete-content">
         <h2><i class="fa fa-trash"></i> Você realmente deseja deletar sua conta?</h2>
         <form class="delete-account-form" method="POST" action="">

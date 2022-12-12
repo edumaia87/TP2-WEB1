@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
         })
         .then((json) => {
             if (json.status == 'ok') {
-                alert('Livro salvos com sucesso!');
+                alert('Livro salvo com sucesso!');
                 window.location.href = 'productsAdmin.php';
             } else if (json.status == 'sla') {
                 alert('Erro');

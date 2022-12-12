@@ -20,9 +20,9 @@
             <label for="password">Senha</label>
             <input name="password" type="password" placeholder="Digite sua senha">
             <label for="cpf">CPF</label>
-            <input id="cpf" name="cpf" type="text" placeholder=" digite seu CPF" maxlength="14" autocomplete="off">
+            <input id="cpf" name="cpf" type="text" placeholder=" digite seu CPF" maxlength="14" autocomplete="off" onkeypress="cpfMask()">
             <label for="cellphone">Telefone</label>
-            <input name="cellphone" type="text" placeholder="Digite seu telefone">
+            <input name="cellphone" type="text" maxlength="14" placeholder="Digite seu telefone">
             <input id="submit-button" name="register" type="submit" value="Cadastrar">
             <p>Já tem conta? <a href="login.php"><strong>Logar</strong></a></p>
         </form>
